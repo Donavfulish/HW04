@@ -1,0 +1,16 @@
+tc_id,scenario,channel,start_status,shipping_address,total_amount,expected_result,notes
+FR18-DT-16,Non-admin login blocked,ui_access,,,,access_non_admin,DT-16 client role check
+FR18-ACCESS-01,Unauthenticated shows login,ui_access,,,,access_login_form,V1-IP2 no token
+FR18-DT-04,Pending shows confirm and cancel,ui_orders,pending,,,btn_pending,DT-04 V2-VP1
+FR18-DT-06,Confirmed shows ship and cancel,ui_orders,confirmed,,,btn_confirmed,DT-06 V2-VP2
+FR18-DT-07,Shipping shows complete only,ui_orders,shipping,,,btn_shipping,DT-07 V2-VP3
+FR18-DT-08,Delivered has no action buttons,ui_orders,delivered,,,btn_delivered_none,DT-08 V2-VP4
+FR18-DT-09,BUG canceled shows mark delivered,ui_orders,canceled,,,bug_c4_btn_hidden,DT-09 BUG-C4 expect no button
+FR18-DT-10,BUG click canceled to delivered,ui_orders,canceled,,,bug_c4_click_reject,DT-10 BUG-C4 expect stay canceled
+FR18-DT-01,BUG revenue doubles delivered amount,ui_dashboard,delivered,,500000,bug_c1_revenue,DT-01 BUG-C1 expect +500000
+FR18-BVA-06,BUG revenue one delivered typical,ui_dashboard,delivered,,100000,bug_c1_revenue,BVA-06 BUG-C1 expect +100000
+FR18-DT-11,BUG XSS via shipping_address,ui_xss,pending,__XSS_IMG__,,bug_c2_escaped,DT-11 BUG-C2 expect escaped
+FR18-DT-12,Safe shipping_address plain text,ui_xss,pending,123 Duong ABC Q1,,addr_plain_ok,DT-12 V3-VP1
+FR18-DT-13,Null shipping_address fallback,ui_xss,pending,__NULL__,,addr_null_fallback,DT-13 V3-VP2
+FR18-DT-17,User token can call admin orders API,api_admin,,,,api_user_forbidden,DT-17 expect 403 role check
+FR18-DT-03,Dashboard order count matches API,ui_dashboard,,,,dash_order_count,DT-03 orders.length
