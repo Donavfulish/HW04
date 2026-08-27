@@ -1,0 +1,11 @@
+.sut/
+tests/node_modules/
+tests/test-results/
+tests/playwright-report/
+tests/.pw-browsers/
+tests/.auth/
+**/node_modules/
+**/test-results/
+**/.pw-browsers/
+.DS_Store
+*.zip
