@@ -403,3 +403,5 @@ async function runApiCase(
 }
 
 // Human review: locale-safe revenue parse and stable XSS locator.
+
+// Cover visibility, value/URL, and HTTP assertion patterns per HW04.

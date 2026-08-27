@@ -279,3 +279,5 @@ async function runApiCase(
 }
 
 // Human review: prefer getByLabel over fragile CSS nth-child selectors.
+
+// Cover visibility, value/URL, and HTTP assertion patterns per HW04.

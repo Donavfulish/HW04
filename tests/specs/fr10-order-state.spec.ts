@@ -368,3 +368,5 @@ async function runAdminUiCase(
 }
 
 // Human review: serialize status transitions to reduce shared-order flake.
+
+// Cover visibility, value/URL, and HTTP assertion patterns per HW04.
