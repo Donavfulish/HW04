@@ -366,3 +366,5 @@ async function runAdminUiCase(
     throw new Error(`Unknown UI admin expected_result: ${opts.expected}`);
   }
 }
+
+// Human review: serialize status transitions to reduce shared-order flake.
