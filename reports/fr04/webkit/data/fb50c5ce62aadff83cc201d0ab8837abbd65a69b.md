@@ -1,0 +1,138 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: fr04-profile.spec.ts >> FR-04 Profile | Run by: 23127044 >> FR04-DT-05 Phone too short 8 digits
+- Location: specs/fr04-profile.spec.ts:84:9
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByRole('heading', { name: /Hồ sơ của bạn/i })
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 5000ms
+  - waiting for getByRole('heading', { name: /Hồ sơ của bạn/i })
+
+```
+
+```yaml
+- banner:
+  - link "EShop":
+    - /url: /
+  - navigation:
+    - link "Giỏ hàng":
+      - /url: /cart
+    - link "Đăng nhập":
+      - /url: /login
+    - link "Đăng ký":
+      - /url: /register
+- main: Vui lòng đăng nhập
+- contentinfo: © 2026 EShop SUT. Dành cho mục đích kiểm thử.
+```
+
+# Test source
+
+```ts
+  1  | import { type Page, type Locator, expect } from '@playwright/test';
+  2  | 
+  3  | /**
+  4  |  * Page Object for storefront Profile (`/profile`).
+  5  |  * Labels in SUT are not wired with htmlFor, so fields are located by form order.
+  6  |  */
+  7  | export class ProfilePage {
+  8  |   readonly page: Page;
+  9  |   readonly form: Locator;
+  10 |   readonly heading: Locator;
+  11 |   readonly emailInput: Locator;
+  12 |   readonly nameInput: Locator;
+  13 |   readonly phoneInput: Locator;
+  14 |   readonly addressInput: Locator;
+  15 |   readonly updateButton: Locator;
+  16 |   readonly loginPrompt: Locator;
+  17 | 
+  18 |   constructor(page: Page) {
+  19 |     this.page = page;
+  20 |     this.form = page.locator('form');
+  21 |     this.heading = page.getByRole('heading', { name: /Hồ sơ của bạn/i });
+  22 |     this.emailInput = this.form.locator('input').nth(0);
+  23 |     this.nameInput = this.form.locator('input').nth(1);
+  24 |     this.phoneInput = this.form.locator('input').nth(2);
+  25 |     this.addressInput = this.form.locator('textarea');
+  26 |     this.updateButton = this.form.getByRole('button', { name: /Cập nhật/i });
+  27 |     this.loginPrompt = page.getByText(/Vui lòng đăng nhập/i);
+  28 |   }
+  29 | 
+  30 |   async goto(): Promise<void> {
+  31 |     await this.page.goto('/profile');
+  32 |   }
+  33 | 
+  34 |   async expectLoaded(): Promise<void> {
+> 35 |     await expect(this.heading).toBeVisible();
+     |                                ^ Error: expect(locator).toBeVisible() failed
+  36 |     await expect(this.page).toHaveURL(/\/profile/);
+  37 |   }
+  38 | 
+  39 |   async fillProfile(fields: {
+  40 |     name?: string;
+  41 |     phone?: string;
+  42 |     shipping_address?: string;
+  43 |   }): Promise<void> {
+  44 |     if (fields.name !== undefined) {
+  45 |       await this.nameInput.fill(fields.name);
+  46 |     }
+  47 |     if (fields.phone !== undefined) {
+  48 |       await this.phoneInput.fill(fields.phone);
+  49 |     }
+  50 |     if (fields.shipping_address !== undefined) {
+  51 |       await this.addressInput.fill(fields.shipping_address);
+  52 |     }
+  53 |   }
+  54 | 
+  55 |   async submit(): Promise<void> {
+  56 |     await this.updateButton.click();
+  57 |   }
+  58 | 
+  59 |   /**
+  60 |    * Submit and capture the next native dialog message (alert).
+  61 |    * Returns null if no dialog appears within timeout.
+  62 |    */
+  63 |   async submitAndGetAlert(timeoutMs = 3000): Promise<string | null> {
+  64 |     const dialogPromise = new Promise<string | null>((resolve) => {
+  65 |       const timer = setTimeout(() => {
+  66 |         this.page.off('dialog', handler);
+  67 |         resolve(null);
+  68 |       }, timeoutMs);
+  69 | 
+  70 |       const handler = async (dialog: { message: () => string; accept: () => Promise<void> }) => {
+  71 |         clearTimeout(timer);
+  72 |         const msg = dialog.message();
+  73 |         await dialog.accept();
+  74 |         resolve(msg);
+  75 |       };
+  76 | 
+  77 |       this.page.once('dialog', handler);
+  78 |     });
+  79 | 
+  80 |     await this.submit();
+  81 |     return dialogPromise;
+  82 |   }
+  83 | 
+  84 |   async isNameRequiredBlocking(): Promise<boolean> {
+  85 |     return this.nameInput.evaluate((el: HTMLInputElement) => {
+  86 |       el.reportValidity();
+  87 |       return el.validity.valueMissing;
+  88 |     });
+  89 |   }
+  90 | }
+  91 | 
+```
