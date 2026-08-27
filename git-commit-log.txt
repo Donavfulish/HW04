@@ -1,3 +1,6 @@
+﻿bd4c6e6 docs: regenerate PDFs with GitHub and YouTube links
+2ffd51b add cursor skill + rules
+990c1c7 docs: refresh git commit log
 02928ff docs: add FR-04 failure screenshots from demo run
 73bdef2 docs: refresh FR-04 chromium/firefox HTML reports from demo run
 4ba46af docs: add YouTube demo link and GitHub Issues references
