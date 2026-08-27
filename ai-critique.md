@@ -3,6 +3,8 @@
 **Họ và tên:** Đỗ Văn Hà  
 **MSSV:** 23127044  
 **Date:** 2026-08-26  
+**GitHub:** https://github.com/Donavfulish/HW04  
+**Demo video:** https://youtu.be/zLgJrBCsQ3c  
 
 ---
 
