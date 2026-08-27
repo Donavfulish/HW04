@@ -1,0 +1,10 @@
+077a379 docs: add README, main report, AI audit/critique, and demo script
+bd8fa9d test(fr04): add data-driven profile automation suite
+66b715e docs: export git commit log for HW04 submission
+418f0a2 test: document three assertion patterns across feature suites
+0ecee71 fix(fr18): harden revenue parsing and XSS assertion locators
+e256607 fix(fr10): reduce flake on shared order state transitions
+ef9f0ea fix(fr04): harden selectors after AI script review
+c190aed test(fr18): add admin order management automation suite
+d690dc8 test(fr10): add order state machine automation suite
+1d04ed6 test(fr04): add data-driven profile automation suite
