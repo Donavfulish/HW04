@@ -1,3 +1,7 @@
+02928ff docs: add FR-04 failure screenshots from demo run
+73bdef2 docs: refresh FR-04 chromium/firefox HTML reports from demo run
+4ba46af docs: add YouTube demo link and GitHub Issues references
+09155b0 docs: refresh git commit log for submission
 077a379 docs: add README, main report, AI audit/critique, and demo script
 bd8fa9d test(fr04): add data-driven profile automation suite
 66b715e docs: export git commit log for HW04 submission
