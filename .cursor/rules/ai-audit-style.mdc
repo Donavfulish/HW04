@@ -1,0 +1,24 @@
+---
+description: Stepwise student AI Audit Log format (mirror HW02 tone)
+alwaysApply: true
+---
+
+# AI Audit Style
+
+When writing `ai-audit.md` (and PDF), use a stepwise student-style log matching the course AI Audit template.
+
+## Required shape (mirror HW02)
+
+1. **Declaration** — e.g. “I use AI tools for the following tasks…” plus tool(s) and human-review note.
+2. **Recording convention** — table of fields: Session ID, Tool, Date/Time (UTC+7), Phase, Prompt tóm tắt, Output tóm tắt, Human review.
+3. **Sessions S01…Sn** — one table (or block) per session with those fields filled.
+
+## Content rules
+
+- **Identity:** Đỗ Văn Hà / MSSV `23127044` in the header.
+- **Tool:** name the AI tool (e.g. Cursor / Claude).
+- **Date/Time:** always UTC+7 (e.g. `2026-08-26 14:30 UTC+7`).
+- **Stepwise prompts:** several focused sessions (setup → each FR → multi-browser → skill → critique). Do **not** collapse the whole assignment into one mega-prompt.
+- **AI output summary:** short paraphrase of what AI produced (files, designs, scripts) — not raw dumps.
+- **Human review:** what was checked, corrected, or accepted after review.
+- Tone and structure should feel like HW02’s `ai-audit.md` (Vietnamese field labels OK).

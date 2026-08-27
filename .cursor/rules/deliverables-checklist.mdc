@@ -1,0 +1,21 @@
+---
+description: Final HW04 package checklist vs homework §14
+alwaysApply: true
+---
+
+# Deliverables Checklist
+
+Before claiming the package complete, verify under `HW04/`:
+
+- [ ] `README.md` — self-assessment table (100), test summary; GitHub + YouTube links when available
+- [ ] `main-report.md` and `main-report.pdf`
+- [ ] `ai-audit.md` and `ai-audit.pdf`
+- [ ] `ai-critique.md` and `ai-critique.pdf` (200–300 words)
+- [ ] Multi-browser HTML reports under `reports/<feature>/<browser>/` with `Run by: 23127044` + ISO timestamp
+- [ ] `bug-report.md` + local files under `screenshots/`
+- [ ] `git-commit-log.txt` — filled after ≥8 script commits
+- [ ] `demo-video-script.md` — ≥5 min Vietnamese narration outline
+- [ ] `agent-skills/playwright-automation-skill/SKILL.md`
+- [ ] Header identity: **Đỗ Văn Hà** / MSSV **23127044**
+
+Zip name: `23127044_HW04_AI_Automation_100.zip` per homework §14.

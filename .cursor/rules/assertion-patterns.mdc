@@ -1,0 +1,35 @@
+---
+description: Require ≥3 assertion patterns — visibility/text, value/nav, API/HTTP
+alwaysApply: true
+---
+
+# Assertion Patterns
+
+Use at least these three patterns across the suite:
+
+## 1. Visibility / text
+
+```ts
+await expect(page.getByRole('heading', { name: 'Hồ sơ' })).toBeVisible();
+await expect(page.locator('.error')).toContainText('Số điện thoại không hợp lệ');
+await expect(page.getByTestId('status')).toHaveText('Đã hủy');
+```
+
+## 2. Value / attribute / navigation
+
+```ts
+await expect(page.getByLabel('Họ tên')).toHaveValue('Nguyen Van A');
+await expect(page).toHaveURL(/\/profile/);
+await expect(page.getByRole('button', { name: 'Lưu' })).toBeEnabled();
+```
+
+## 3. HTTP / API
+
+```ts
+const res = await page.request.put('/api/profile', { data: payload });
+expect(res.ok()).toBeTruthy();
+const body = await res.json();
+expect(body.phone).toMatch(/^0/);
+```
+
+Failing assertions that reveal real SUT defects belong in `bug-report.md` with screenshots (see `evidence-screenshots` rule).

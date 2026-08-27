@@ -1,0 +1,11 @@
+---
+description: HW04 work boundary — only HW04/, never HW02/, never push SUT
+alwaysApply: true
+---
+
+# HW04 Scope
+
+- Create/edit files only under `HW04/`.
+- Never modify `HW02/`.
+- Clone SUT to `HW04/.sut/` for local runs only; never `git push` to upstream.
+- Student: **Đỗ Văn Hà** — MSSV **23127044** (use in HTML report metadata `Run by: 23127044`).

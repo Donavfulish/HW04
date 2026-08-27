@@ -1,0 +1,13 @@
+---
+description: Playwright TS layout, 3 browsers, HTML reporter with Run by metadata
+alwaysApply: true
+---
+
+# Playwright Setup
+
+- Put the Playwright TypeScript project under `tests/` (`package.json`, `playwright.config.ts`, `specs/`, `pages/`, `helpers/`, `data/`).
+- Define three projects in `playwright.config.ts`: `chromium`, `firefox`, and `webkit`.
+- Write HTML reporter output under `reports/<feature>/<browser>/` (e.g. `reports/fr04/chromium/`).
+- Every HTML report must visibly show `Run by: 23127044` and an ISO timestamp (title, header, footer, or report metadata).
+- Default local SUT URLs: backend `http://localhost:3000`, web `http://localhost:5173`, admin `http://localhost:5174`.
+- Run each feature suite once per browser project (≥9 browser runs total for 3 features × 3 browsers).

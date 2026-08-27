@@ -1,0 +1,12 @@
+---
+description: CSV-only primary test data; ≥12 rows per feature; load via helper
+alwaysApply: true
+---
+
+# Data-Driven CSV
+
+- Keep all variable inputs in CSV files under `tests/data/` (e.g. `fr04-profile.csv`, `fr10-order-state.csv`, `fr18-order-admin.csv`).
+- Each feature must have ≥12 data rows (positive + negative + edge all count).
+- Specs must load rows via a shared helper (e.g. `tests/helpers/csv.ts`) — columns such as `tc_id`, inputs, `expected`, `type`.
+- Forbid hardcoded inline arrays/objects as the **primary** dataset in specs.
+- Prefer selecting cases from HW02 domain/BVA tables for FR-04 / FR-10 / FR-18, adapted for UI automation.

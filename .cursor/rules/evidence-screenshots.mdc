@@ -1,0 +1,11 @@
+---
+description: Local screenshots + bug-report for HW04 evidence
+alwaysApply: true
+---
+
+# Evidence & Screenshots
+
+- When automation reveals a **real SUT defect**, capture a screenshot under `screenshots/` (descriptive filename, e.g. `fr04-BUG-A1-phone.png`).
+- Add a matching entry in `bug-report.md` with: bug id, feature, steps, expected vs actual, and the screenshot path.
+- GitHub Issues are created later on the student’s public repo (with screenshots attached).
+- Never push to the SUT upstream; evidence stays under `HW04/`.
