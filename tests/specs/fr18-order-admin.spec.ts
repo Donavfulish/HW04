@@ -401,3 +401,5 @@ async function runApiCase(
   }
   throw new Error(`Unknown API expected_result: ${expected}`);
 }
+
+// Human review: locale-safe revenue parse and stable XSS locator.
