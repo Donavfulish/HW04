@@ -22,8 +22,9 @@ Bài tập tự động hóa kiểm thử UI/API bằng **Playwright TypeScript*
 | Bugs documented | 13 |
 | Agent Skill | `playwright-automation-skill` |
 
-Demo video: _(cập nhật sau khi upload YouTube)_  
-GitHub: _(cập nhật sau khi tạo repo)_  
+Demo video: https://youtu.be/zLgJrBCsQ3c  
+GitHub: https://github.com/Donavfulish/HW04  
+GitHub Issues: https://github.com/Donavfulish/HW04/issues (#1–#4, #6–#13; skip #5)  
 
 ---
 
@@ -133,7 +134,7 @@ Skill đóng gói workflow: đọc feature → CSV → POM → ≥3 assertion pa
 | Fail | 13 |
 | Browser runs | 9 |
 | Bugs in `bug-report.md` | 13 |
-| GitHub Issues | _(sẽ tạo trên repo công khai)_ |
+| GitHub Issues | [Issues](https://github.com/Donavfulish/HW04/issues) (#1–#4, #6–#13 + screenshots; skip #5) |
 
 ### Per-feature (chromium baseline)
 
@@ -181,7 +182,7 @@ Quy trình Playwright data-driven từng bước + human review cho suite ổn �
 | AI Audit | [ai-audit.md](ai-audit.md) | [ai-audit.pdf](ai-audit.pdf) |
 | AI Critique | [ai-critique.md](ai-critique.md) | [ai-critique.pdf](ai-critique.pdf) |
 | README | [README.md](README.md) | — |
-| Demo script | [demo-video-script.md](demo-video-script.md) | — |
+| Demo script | [demo-video-script.md](demo-video-script.md) | https://youtu.be/zLgJrBCsQ3c |
 | Git commit log | [git-commit-log.txt](git-commit-log.txt) | — |
 
 > Bản PDF: [main-report.pdf](main-report.pdf)

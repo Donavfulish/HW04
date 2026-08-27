@@ -4,8 +4,9 @@
 **MSSV:** 23127044  
 **Assignment:** HW04 — AI Automation  
 **Date:** 2026-08-26  
-**GitHub:** _(cập nhật sau khi tạo repo)_  
-**Demo video:** _(cập nhật sau khi upload YouTube)_  
+**GitHub:** https://github.com/Donavfulish/HW04  
+**GitHub Issues:** https://github.com/Donavfulish/HW04/issues  
+**Demo video:** https://youtu.be/zLgJrBCsQ3c  
 
 ---
 
@@ -35,10 +36,10 @@
 | TC failed (bugs / expected defects) | **13** |
 | Browser runs | **9** (3 features × Chromium / Firefox / WebKit) |
 | Bugs discovered / documented | **13** |
-| GitHub Issues | _(sẽ tạo trên repo công khai)_ |
+| GitHub Issues | [Issues](https://github.com/Donavfulish/HW04/issues) (#1–#4, #6–#13; skip #5) |
 | Agent Skill | `playwright-automation-skill` |
-| Demo video | _(YouTube Unlisted — cập nhật sau)_ |
-| Public GitHub | _(cập nhật sau)_ |
+| Demo video | https://youtu.be/zLgJrBCsQ3c |
+| Public GitHub | https://github.com/Donavfulish/HW04 |
 
 ### Per-feature breakdown (chromium)
 
@@ -79,7 +80,7 @@ HW04/
 |-------|------|
 | playwright-automation-skill | [`agent-skills/playwright-automation-skill/SKILL.md`](agent-skills/playwright-automation-skill/SKILL.md) |
 
-**Demo video (YouTube Unlisted):** _(cập nhật sau)_  
+**Demo video (YouTube Unlisted):** https://youtu.be/zLgJrBCsQ3c  
 Narration outline: [`demo-video-script.md`](demo-video-script.md)
 
 ---
@@ -92,6 +93,6 @@ Narration outline: [`demo-video-script.md`](demo-video-script.md)
 | `ai-audit.md` | `ai-audit.pdf` | ✅ |
 | `ai-critique.md` | `ai-critique.pdf` | ✅ |
 
-1. Điền link GitHub / YouTube / Issues / `git-commit-log.txt` (xem `TODO.md`).  
+1. Commit + push docs cập nhật (GitHub / Issues / YouTube đã điền).  
 2. ZIP → `23127044_HW04_AI_Automation_100.zip` (loại trừ `.sut/`, `node_modules/`, `.pw-browsers/`, …).  
 3. Upload Moodle trước deadline.

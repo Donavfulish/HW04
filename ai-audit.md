@@ -5,7 +5,8 @@
 **Course:** Software Testing  
 **Assignment:** HW04 — AI-Assisted Test Automation on EShop SUT  
 **Tool:** Cursor (Claude)  
-**Repo:** _(cập nhật sau khi tạo repo)_  
+**Repo:** https://github.com/Donavfulish/HW04  
+**Issues:** https://github.com/Donavfulish/HW04/issues  
 
 ---
 
@@ -15,7 +16,7 @@
 
 - **Tool:** Cursor (Claude) — primary AI assistant for the entire assignment
 - **Tasks:** Playwright scaffold, CSV data design from HW02 DT/BVA, Page Object models, data-driven specs, multi-browser HTML reports, Agent Skill authoring, bug evidence capture, main report / README / critique drafting
-- **Human review:** All AI outputs reviewed and corrected before keeping; scripts executed locally on Chromium/Firefox/WebKit; failing cases cross-checked against SRS; screenshots saved under `screenshots/`; GitHub Issues sẽ tạo trên repo công khai
+- **Human review:** All AI outputs reviewed and corrected before keeping; scripts executed locally on Chromium/Firefox/WebKit; failing cases cross-checked against SRS; screenshots saved under `screenshots/`; GitHub Issues published at https://github.com/Donavfulish/HW04/issues
 
 ---
 
@@ -157,7 +158,7 @@ Mọi interaction với AI trong bài này đều được ghi lại theo format
 | **Phase** | Demo video prep |
 | **Prompt tóm tắt** | Viết `demo-video-script.md` ≥5 phút tiếng Việt: whoami/hostname → FR-04 × 3 browsers → mở HTML report → kể 1 lần sửa AI (CSV/`workers`). |
 | **Output tóm tắt** | Kịch bản narration có timestamp ước lượng. |
-| **Human review** | Giữ kịch bản; link YouTube sẽ cập nhật sau khi quay và upload. |
+| **Human review** | Giữ kịch bản; video Unlisted: https://youtu.be/zLgJrBCsQ3c |
 
 ---
 
