@@ -1,0 +1,18 @@
+tc_id,scenario,name,phone,shipping_address,role,channel,expected_result,notes
+FR04-DT-01,Happy path all valid,Nguyen Van A,912345678,123 ABC Q1,,ui,ui_success,V1-VP1+V2-VP1+V3-VP1
+FR04-DT-02,VN phone starts with 0,Nguyen Van A,0912345678,123 ABC Q1,,ui,ui_vn_phone_accept,V2-IP1 BUG-A1 expected accept
+FR04-DT-03,Phone 9 digits per regex,Nguyen Van A,912345678,123 ABC Q1,,ui,ui_success,V2-VP1
+FR04-DT-04,Phone 10 digits per regex,Nguyen Van A,9123456789,123 ABC Q1,,ui,ui_success,V2-VP2
+FR04-DT-05,Phone too short 8 digits,Nguyen Van A,91234567,123 ABC Q1,,ui,ui_phone_reject,V2-IP2
+FR04-DT-06,Phone too long 11 digits,Nguyen Van A,91234567890,123 ABC Q1,,ui,ui_phone_reject,V2-IP3
+FR04-DT-07,Phone with letters,Nguyen Van A,09abc12345,123 ABC Q1,,ui,ui_phone_reject,V2-IP4
+FR04-DT-08,Phone empty,Nguyen Van A,,123 ABC Q1,,ui,ui_phone_reject,V2-IP5
+FR04-DT-09,Empty name blocked by HTML,,912345678,123 ABC Q1,,ui,ui_html_required,V1-IP1 frontend
+FR04-DT-10,Empty name via API,,912345678,abc,,api,api_400,V1-IP1 BUG-A3
+FR04-DT-11,Whitespace-only name,"   ",912345678,123 ABC Q1,,ui,ui_name_reject,V1-IP2
+FR04-DT-12,Normal shipping address,Nguyen Van A,912345678,"123 Duong Le Loi, Q1, TP.HCM",,ui,ui_success,V3-VP1
+FR04-DT-13,Empty shipping address,Nguyen Van A,912345678,,,ui,ui_success,V3-VP2
+FR04-DT-14,Privilege escalation role=admin,Nguyen Van A,912345678,x,admin,api,api_403,V4-IP1 BUG-A2
+FR04-DT-15,Missing Authorization header,Nguyen Van A,912345678,x,,api,api_401,V5-IP1
+FR04-DT-16,Tampered JWT token,Nguyen Van A,912345678,x,,api,api_403,V5-IP2 tampered token
+FR04-DT-17,Very long shipping address,Nguyen Van A,912345678,__LONG_600__,,ui,ui_success,V3-VP3
