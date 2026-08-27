@@ -1,0 +1,19 @@
+tc_id,scenario,channel,start_status,target_status,actor,expected_result,notes
+FR10-DT-01,Valid pending to confirmed,api_admin,pending,confirmed,admin,admin_200,DT-01 legal forward
+FR10-DT-02,Valid pending to canceled admin,api_admin,pending,canceled,admin,admin_200,DT-02 admin cancel
+FR10-DT-03,Valid confirmed to shipping,api_admin,confirmed,shipping,admin,admin_200,DT-03 legal forward
+FR10-DT-05,Valid shipping to delivered,api_admin,shipping,delivered,admin,admin_200,DT-05 legal forward
+FR10-DT-06,Invalid skip pending to shipping,api_admin,pending,shipping,admin,admin_400,DT-06 skip-step
+FR10-DT-08,Invalid skip confirmed to delivered,api_admin,confirmed,delivered,admin,admin_400,DT-08 skip-step
+FR10-DT-11,Invalid delivered terminal to canceled,api_admin,delivered,canceled,admin,admin_400,DT-11 terminal
+FR10-DT-12,BUG canceled to delivered admin,api_admin,canceled,delivered,admin,admin_bug_b1,DT-12 BUG-B1 expect 400
+FR10-DT-14,Order id not found admin,api_admin,pending,confirmed,admin,admin_404,DT-14 id=99999
+FR10-BVA-07,Invalid shipping to canceled admin,api_admin,shipping,canceled,admin,admin_400,BVA-07 OFF point admin
+FR10-DT-15,Valid user cancel pending,api_user,pending,canceled,user,user_cancel_200,DT-15 owner cancel
+FR10-DT-16,Valid user cancel confirmed,api_user,confirmed,canceled,user,user_cancel_200,DT-16 owner cancel
+FR10-DT-17,BUG user cancel shipping,api_user,shipping,canceled,user,user_bug_b3,DT-17 BUG-B3 expect 400
+FR10-DT-18,Invalid user cancel delivered,api_user,delivered,canceled,user,user_cancel_400,DT-18 terminal block
+FR10-DT-21,BUG cancel button on shipping UI,ui_web,shipping,,user,ui_bug_b2,DT-21 BUG-B2 expect hidden
+FR10-DT-22,Cancel button hidden delivered,ui_web,delivered,,user,ui_cancel_hidden,DT-22 terminal UI
+FR10-DT-23,Cancel button hidden canceled,ui_web,canceled,,user,ui_cancel_hidden,DT-23 terminal UI
+FR10-UI-01,Admin UI confirm pending order,ui_admin,pending,confirmed,admin,ui_admin_confirm,Admin Xác nhận button
